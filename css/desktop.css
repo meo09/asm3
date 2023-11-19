@@ -1,0 +1,389 @@
+html {
+    font-family: monospace;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #444;
+    height: 100vh;
+}
+
+.content {
+    padding: 0px 24px;
+    max-width: 1248px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* =====Banner CSS===== */
+header {
+    height: 100%;
+}
+
+.banner {
+    position: relative;
+    background-color: #312f2f88;
+}
+
+header .banner img {
+    object-fit: cover;
+    object-position: 50% 0px;
+    width: 100%;
+    filter: grayscale(20%) contrast(50%);
+}
+
+.banner .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+}
+
+.banner .text h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.banner .text p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* =====Nav Bar CSS===== */
+
+#nav-bar .container a {
+    padding: 4px 28px;
+    font-size: 14px;
+    color: #444;
+    border: 1px solid #ccc;
+}
+
+#nav-bar .container .main {
+    padding: 4px 68px;
+}
+#nav-bar .container .main h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+#nav-bar .container .main p {
+    color: #7f8286;
+}
+
+.nav-icon {
+    height: 12px;
+    width: 12px;
+    margin-right: 4px;
+    color: #199cdb;
+}
+
+/* =====About CSS===== */
+
+#about {
+    font-size: 14px;
+    margin-bottom: 54px;
+}
+
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+}
+
+#target,
+#personal-info {
+    flex: 1;
+    padding: 80px 66px 32px;
+}
+/* target */
+#target {
+    background-color: #e9ecef;
+}
+
+#target p {
+    line-height: 1.2;
+}
+
+/* personal information */
+
+#personal-info {
+    background-color: #ced4da;
+}
+
+#personal-info li {
+    margin-bottom: 4px;
+}
+
+#personal-info span {
+    font-weight: 600;
+}
+
+.personal-info-icon {
+    margin-top: 60px;
+    gap: 12px;
+    color: #199cdb;
+    font-size: 20px;
+}
+/*ẩn thông tin cá nhân*/
+.hide{display:none !important;}
+/* #personal-info .personal-info-icon { display: none !important; } */
+/*css enror cho email*/
+#enror-email{
+    color: red;
+   
+
+}
+/*none view more*/
+.view-more,
+.less-more
+{display: none;}
+/* =====Job Information CSS===== */
+
+#job-info {
+    margin-bottom: 54px;
+}
+
+/* dùng grid css thuần */
+#job-info .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+/*ẩn ttin nghề nghiệp*/
+
+.desc{display:none !important;}
+
+#job-info .container > div {
+    border: 1px solid #ccc;
+    padding: 28px;
+}
+
+#job-info .title {
+    margin-bottom: 32px;
+}
+
+#job-info .title h2 {
+    font-size: 24px;
+    margin-right: auto;
+}
+
+#job-info .title i {
+    font-size: 32px;
+}
+
+#job-info h3 {
+    position: relative;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#job-info h3::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -16px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #199cdb;
+}
+
+#job-info .time {
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.time span {
+    display: inline-block;
+    padding: 2px 4px;
+    color: #fff;
+    background-color: #199cdb;
+    border-radius: 4px;
+}
+
+#job-info .abc {
+    gap: 32px;
+}
+
+.bar {
+    display: inline-block;
+    height: 4px;
+    width: 52px;
+    background-color: #444;
+}
+
+.blue-bar {
+    background-color: #199cdb;
+}
+
+/* hobby */
+#hobby .abc .item {
+    text-align: center;
+}
+
+#hobby .abc .item i {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #199cdb;
+}
+
+/* =====Prize CSS===== */
+
+#prize {
+    padding: 48px 0px;
+    background-color: #ced4da;
+    margin-bottom: 52px;
+}
+
+#prize h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.prize-list .row {
+    padding: 28px 0px;
+}
+
+.prize-list .row-1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 120px;
+    background-color: orange;
+}
+
+.prize-list .row .item:nth-child(2n) {
+    position: relative;
+}
+
+.prize-list .row:not(:first-child) {
+    border-top: 1px solid orange;
+}
+
+.prize-list .item {
+    gap: 24px;
+}
+
+#prize img {
+    width: 200px;
+    height: auto;
+}
+
+.prize-list .item h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.prize-list .item p {
+    font-size: 14pxn;
+    margin-bottom: 4px;
+}
+
+/* =====Project CSS===== */
+#project {
+    margin-bottom: 52px;
+}
+
+#project h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+/* sử dụng grid css thuần */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.project-list .item {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-list .item:hover {
+    box-shadow: 0px 20px 30px 0px rgb(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+.project-list img {
+    width: 100%;
+    height: auto;
+}
+
+.project-list .title.abc {
+    font-size: 18px;
+}
+
+.project-list .abc:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+}
+
+.project-list .abc .time {
+    padding: 4px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    background-color: #199cdb;
+    border-radius: 12px;
+    flex: 0;
+}
+
+.project-list .abc {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.project-list .abc:nth-of-type(1) {
+    gap: 8px;
+}
+
+.project-list .abc:not(:nth-of-type(1)) span {
+    display: inline-block;
+    flex: 1;
+}
+
+.project-list .abc:not(:nth-of-type(1)) p {
+    flex: 2;
+}
+
+/* =====Footer CSS===== */
+#footer {
+    padding: 40px 0px;
+    background-color: #dee2e6;
+}
+
+#footer .container {
+    gap: 32px;
+}
+
+#footer .item {
+    font-size: 18px;
+    color: #7f8286;
+}
+
+#footer i {
+    font-size: 24px;
+    color: #199cdb;
+}

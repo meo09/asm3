@@ -1,0 +1,95 @@
+@media only screen and (max-width: 1064px) {
+    /* =====Header/Banner===== */
+    header .banner img {
+        width: 50%;
+    }
+
+    /* =====Nav bar===== */
+    #nav-bar .container .main {
+        height: 50px;
+        width: 68px;
+    }
+
+    #nav-bar .container .main * {
+        display: none;
+    }
+
+    #nav-bar .container a {
+        white-space: nowrap;
+    }
+
+    /* =====About===== */
+    #target,
+    #personal-info {
+        padding: 40px 60px 28px;
+    }
+
+    .personal-info-icon {
+        margin-top: 30px;
+    }
+
+    /* =====Job Information===== */
+    #job-info .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 400px 200px 200px 150px 100px 100px;
+        gap: 32px;
+    }
+
+    #experience {
+        grid-row: 1 / span 2;
+    }
+    #education {
+        grid-row: 2 / span 2;
+    }
+
+    #skill {
+        grid-column: 1 / 2;
+        grid-row: 3 / span 2;
+    }
+
+    #hobby {
+        grid-row: 4 / span 2;
+    }
+
+    #language {
+        grid-row: 5 / span 2;
+    }
+
+    /* =====Prize CSS===== */
+    /*#prize {}*/
+
+    #prize .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #prize .item {
+        padding: 12px;
+    }
+
+    #prize .row .item:nth-child(2n) {
+        border-left: 1px solid orange;
+    }
+
+    #prize .row-1::after {
+        display: none;
+    }
+
+    #prize .row-1 .item {
+        flex: 1 0;
+    }
+
+    #prize img {
+        /* max-width: 400px; */
+        width: 100%;
+    }
+
+    .prize-list .row .item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    #prize .item {
+        flex-direction: column;
+    }
+}

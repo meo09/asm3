@@ -1,0 +1,159 @@
+html {
+    font-family: monospace;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    color: #444;
+}
+
+main {
+    background-color: #454545;
+    padding: 24px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 16px;
+}
+
+section {
+    padding: 20px;
+    border-radius: 6px;
+    transition: transform 400ms ease;
+}
+
+section:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    transform: scale(0.99);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 32px;
+}
+
+.title {
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 12px;
+    border-bottom: 2px solid #000;
+}
+
+i::before {
+    display: inline-block;
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* =====Goals CSS===== */
+
+#goals {
+    background-color: #ff6000;
+    color: #292622;
+}
+
+/* =====Time line===== */
+#timeline {
+    grid-column: 3/-1;
+    grid-row: 1 / span 2;
+    background-color: #ffa559;
+}
+
+.order {
+    font-size: 40px;
+    padding: 6px;
+    border-radius: 50%;
+    border: 3px solid #444;
+}
+
+/* =====Team===== */
+#team {
+    background-color: #ffe6c7;
+}
+
+/* =====Scope===== */
+#scope {
+    background-color: #f6f1e9;
+}
+
+#scope p {
+    margin-bottom: 4px;
+}
+
+/* =====Primary CSS===== */
+#primary {
+    color: #0b0707;
+    background-color: #ff8400;
+}
+
+/* =====back btn===== */
+#back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #292622;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all 300ms ease-in;
+}
+
+#back-btn i {
+    font-size: 32px;
+    padding: 12px;
+    margin: 8px;
+    color: #ff6000;
+    border: 2px solid #ff6000;
+    border-radius: 50%;
+}
+
+#back-btn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* ============Media query=========== */
+/* =====tablet screen===== */
+@media only screen and (max-width: 1064px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #timeline {
+        grid-column: auto;
+        grid-row: auto;
+        background-color: #ffa559;
+    }
+
+    .row {
+        justify-content: center;
+    }
+}
+
+/* =====mobile screen===== */
+
+@media only screen and (max-width: 664px) {
+    .row:not(#goals .row, #primary .row) {
+        flex-direction: column;
+    }
+}
